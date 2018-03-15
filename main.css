@@ -1,5 +1,6 @@
 body {
     font-family: 'Work Sans', Helvetica, Arial, sans-serif;
+    z-index: 10;
 }
 
 a {
@@ -11,21 +12,21 @@ a:hover {
     text-decoration: none;
 }
 
-#kene-image {
-    background-attachment: fixed;
-    padding-left: 10vw;
-    position: sticky;
+#kene-img {
+    position: fixed;
+    z-index: 1;
+    margin-right: 30vw;    
 }
 
 #header {
     background-color: rgb(14, 14, 14);
     margin: -20px 20px 0 20px;
     padding-bottom: 40px;
+    
 }
 
 #header-text {
     padding-right: 95px;
-    
 }
 
 #header-text-1 {
@@ -55,12 +56,20 @@ a:hover {
     padding-top: 20px;
 }
 
+#second-level {
+    background-color: #ffffff;
+    position: relative;
+    z-index: 2;
+    padding-bottom: 50px;
+    padding-top: 5px;
+}
+
 #work-subheader {
     color: #0e0e0e;
     font-weight: 600;
     font-size: 40px;
     margin-top: 50px;
-}
+} 
 
 #s {
     border-bottom-color: #09d261;
@@ -71,6 +80,10 @@ a:hover {
 .row {
     margin-top: 40px;
     margin-bottom: 70px;
+}
+
+.my-row {
+    background-color: white;
 }
 
 .work-header {
@@ -106,12 +119,14 @@ a:hover {
     margin: 0 20px 20px 20px;
     color: white;
     padding-bottom: 20px;
+    position: relative;
+    z-index: 2;
 }
 
 #send-icon {
     padding-right: 4px;
     font-size: 14px;
-    color: 9b9b9b;
+    color: #9b9b9b;
 }
 
 .footer-text {
@@ -239,3 +254,16 @@ a:hover {
     color: #0be370;
 }
 
+@media(max-width: 780px) {
+    #header-text {
+        position: relative;
+        z-index: 2;
+    }
+
+    #kene-img-shell {
+        position: relative;
+        z-index: 1;
+        margin-right: 30vw;
+        margin-top: -70vw;
+    }
+}
